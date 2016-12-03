@@ -18,9 +18,13 @@
 	height: 60px;
 	width: 100%;
 	background: #222;
+<<<<<<< HEAD
 	color:#9d9d9d;
 	position: fixed;
 	top: 0;
+=======
+	color:#9d9d9d
+>>>>>>> fab5b5766fbf88ccb7c8b9b3b1242be4c6d5b00c
 }
 .navbar a{
 	color:#9d9d9d;
@@ -54,6 +58,7 @@
 }
 #content{
 	
+<<<<<<< HEAD
 	margin-top: 60px;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -61,14 +66,31 @@
 }
 #do_list{
 	list-style: none;
+=======
+	margin: 0;
+	
+	width: 100%;
+}
+#do_list{
+>>>>>>> fab5b5766fbf88ccb7c8b9b3b1242be4c6d5b00c
 	font-size: 1.4em;
 	font-family: "微软雅黑";
 	margin-left: 0;
 	margin-right: 0;
+<<<<<<< HEAD
 	color: #494a4a;
+=======
+	
+>>>>>>> fab5b5766fbf88ccb7c8b9b3b1242be4c6d5b00c
 	
 }
 #do_list>li{
 	border-bottom: 1px solid #a1a1a1;
 	padding-bottom: 10px;
 }
+<<<<<<< HEAD
+=======
+#do_list,.today_list{
+	list-style: none;
+}
+>>>>>>> fab5b5766fbf88ccb7c8b9b3b1242be4c6d5b00c
