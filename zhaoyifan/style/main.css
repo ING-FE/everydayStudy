@@ -1,0 +1,66 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../static/Bungee-Regular.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: myFirstFont;
+    text-align: center;
+}
+
+a {
+    left: 25%;
+    width: 50%;
+    position: fixed;
+    background-color:rgba(1, 1, 1, 0);
+    color: purple;
+}
+@media (orientation: portrait) {
+    a {
+        font-size: 60px;
+    }
+}
+#left {
+    background-color: #30A080;
+    box-shadow: 0 0 50px 0 #60A080 inset;
+    height: 100%;
+    width: 50%;
+    float: left;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right {
+    background-color: #1672B9;
+    box-shadow: 0 0 50px 0 #007269 inset;
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (orientation: portrait) {
+    #left {
+        height: 50%;
+        width: 100%;
+    }
+    #right {
+        height: 50%;
+        width: 100%;
+    }
+}
+#leftText {
+    font-family: myFirstFont;
+    font-size: 36px;
+}
+@media (orientation: portrait) {
+    #leftText {
+        font-size: 72px;
+    }
+}
