@@ -18,13 +18,21 @@
 	height: 60px;
 	width: 100%;
 	background: #222;
-	color:#9d9d9d
+	color:#9d9d9d;
+	position: fixed;
+	top: 0;
+	color:#9d9d9d;
 }
 .navbar a{
 	color:#9d9d9d;
 	font-size: 1em;
 	text-decoration: none;
 	line-height: 60px;
+}
+a{
+	color:#494a4a;
+	font-size: 1em;
+	/*text-decoration: none;*/
 }
 .navbar-name{
 	font-size: 2em;
@@ -51,23 +59,161 @@
 	display: inline-block;
 }
 #content{
-	
-	margin: 0;
+	margin-top: 60px;
 	
 	width: 100%;
 }
+.year{
+	margin: 0px auto;
+	padding: 10px;
+	border: 1px solid #A1A1A1;
+	background: #A1A1A1;
+	text-align: center;
+}
+.month{
+	/*text-align: center;*/
+}
 #do_list{
-	font-size: 1.4em;
+	margin-top: 60px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+	list-style: none;
+}
+#do_list{
+	/*font-size: 1.4em;*/
 	font-family: "微软雅黑";
 	margin-left: 0;
 	margin-right: 0;
-	
-	
+	color: #494a4a;
+
 }
 #do_list>li{
 	border-bottom: 1px solid #a1a1a1;
 	padding-bottom: 10px;
 }
-#do_list,.today_list{
-	list-style: none;
+
+.navbar-nav, .navbar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar-nav {
+    height: 58px;
+}
+.navbar-nav li {
+    background: -moz-linear-gradient(#292929, #252525);
+    background: -ms-linear-gradient(#292929, #252525);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #252525));
+    background: -webkit-linear-gradient(#292929, #252525);
+    background: -o-linear-gradient(#292929, #252525);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525')";
+    background: linear-gradient(#292929, #252525);
+
+    border-bottom: 2px solid #181818;
+    border-top: 2px solid #303030;
+    min-width: 160px;
+}
+.navbar-nav > li {
+    display: block;
+    float: left;
+    position: relative;
+}
+.navbar-nav > li:first-child {
+    border-radius: 5px 0 0;
+}
+.navbar-nav a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: #808080;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 18px;
+    line-height: 54px;
+    padding: 0 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* onhover styles */
+.navbar-nav li:hover {
+    background-color: #1c1c1c;
+    background: -moz-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -ms-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #1b1b1b));
+    background: -webkit-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -o-linear-gradient(#1c1c1c, #1b1b1b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
+    background: linear-gradient(#1c1c1c, #1b1b1b);
+
+    border-bottom: 2px solid #222222;
+    border-top: 2px solid #1B1B1B;
+}
+.navbar-nav li:hover > a {
+    border-radius: 5px 0 0 0;
+    border-left: 3px solid #9AC0CD;
+    color: #9AC0CD;
+}
+
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+.navbar-nav .submenu li:hover a {
+    border-left: 3px solid #454545;
+    border-radius: 0;
+    color: #ffffff;
+}
+.navbar-nav > li:hover .submenu, .navbar-nav > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 10;
+}
+.navbar-nav > li:hover .submenu li, .navbar-nav > li:focus .submenu li {
+    opacity: 1;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+.left_plan{
+	width: 47%;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+.right_done{
+	width: 47%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 2%;
+	border-left: 1px dotted #A1A1A1;
 }
