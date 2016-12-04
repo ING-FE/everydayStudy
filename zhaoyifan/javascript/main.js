@@ -5,12 +5,15 @@ function $(id) {
 var left = $('left');
 var right = $('right');
 var interval = null;
+console.log(matchMedia('(orientation: landscape)').matches);
 
 left.onmouseenter = function(e) {
-    Expand(left, right);
+    if(matchMedia('(orientation: landscape)').matches)
+        Expand(left, right);
 }
 right.onmouseenter = function(e) {
-    Expand(right, left);
+    if(matchMedia('(orientation: landscape)').matches)
+        Expand(right, left);
 }
 
 right
