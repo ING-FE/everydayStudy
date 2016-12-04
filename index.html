@@ -4,95 +4,73 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 
     <title>Everydaystudy by ING-FE</title>
   </head>
-  <style>
-    a {
-      color:black;
-      text-decoration: none;
-      font-size: 15px;
-    }
-    a:hover{
-      font-size: 20px;
-      color: limegreen;
-    }
-    .wrap{
-      width: 500px;
-      height: 300px;
-      margin: 0 auto;
-      border: 1px solid white;
-      border-radius: 10px;
-    }
-    .item{
-      width: 100%;
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-    }
-    .pic{
-      width: 100%;
-      height: 300px;
 
-    }
-    .pic img{
-      width: 22%;
-      height: 298px;
-      border: 1px solid white;
-      margin: 15px;
-    }
-  </style>
   <body>
-
-    <header>
-      <div class="container">
-        <h1>Everydaystudy</h1>
-        <h2>世界上最帅和最美的人都在这里了</h2>
+  <div class="container">
+        <header>ING-FE</header>
+        <p>— —世界上最好看的人都在这里啦</p>
+  </div>
+  <div class="wrap">
+        <div class="item">
+            <img src="images/a4-min.jpg">
+            <div class="auto">
+                <a href="hcy.html">韩楚怡老学姐</a>
+            </div>
+        </div>
+      <div class="item" style="background-color: black"></div>
+      <div class="item">
+          <img src="images/a2-min.jpg">
+          <div class="auto">
+              <a href="zhaoyifan">印第安老斑鸠</a>
+          </div>
       </div>
-    </header>
+      <div class="item" style="background-color: white"></div>
+      <div class="item" style="background-color: white"></div>
+      <div class="item">
+          <img src="images/a3-min.jpg">
+          <div class="auto">
+              <a href="wqt.html">wuli涛涛</a>
+          </div>
+      </div>
 
-   <div class="wrap">
-     <div class="item">
-         <div>
-            <a href="hcy.html">韩楚怡老学姐</a>
-         </div>
-         <div>
-             <a href="wqt.html">翁清涛</a>
-         </div>
-
-         <div>
-             <a href="lily.html">美丽的学姐，一点儿都不老</a>
-         </div>
-         <div>
-	        <a href="c6j.html">我是小学妹</a>
-		 </div>
-         <div>
-             <a href="zq.html">张骞</a>
-         </div>
-
-
-
-
-
-
-
-
-
-         <div>
-             <a href="zhaoyifan/">Febv</a>
-         </div>
-
-
+      <div class="item" style="background-color:black"></div>
+      <div class="item">
+          <img src="images/a3-min.jpg">
+          <div class="auto">
+              <a href="zq.html">our 骞 </a>
      </div>
    </div>
-    <!--<div class="pic">-->
-      <!--<img src="images/a1.jpg">-->
-      <!--<img src="images/a2-min.jpg">-->
-      <!--<img src="images/a3-min.jpg">-->
-      <!--<img src="images/a4-min.jpg">-->
-    <!--</div>-->
+
+      <div class="item">
+          <img src="images/6j.jpg">
+          <div class="auto">
+              <a href="c6j.html">陈柳娟</a>
+          </div>
+      </div>
+      <div class="item" style="background-color: white"></div>
+      <div class="item">
+          <img src="images/chenlin.jpg">
+          <div class="auto">
+              <a href="lily.html">陈琳</a>
+          </div>
+      </div>
+      <div class="item" style="background-color: black"></div>
+  </div>
+
   </body>
+  <script src="./javascripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".auto").hide();
+        $(".item").hover(function () {
+            // $(this).find("div").addClass(" animated bounceInDown");
+            $(this).find("div").slideToggle(500).show();
+
+        })
+    })
+</script>
 </html>
