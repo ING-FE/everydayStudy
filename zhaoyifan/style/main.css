@@ -30,10 +30,13 @@ a {
     height: 100%;
     width: 50%;
     float: left;
-    text-align: center;
+    text-align: center; 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#left :hover {
+    cursor: pointer;
 }
 #right {
     background-color: #1672B9;
@@ -55,12 +58,17 @@ a {
         width: 100%;
     }
 }
-#leftText {
+.title {
     font-family: myFirstFont;
     font-size: 36px;
 }
 @media (orientation: portrait) {
-    #leftText {
+    .title {
         font-size: 72px;
     }
+}
+#leftContent {
+    display: none;
+    text-align: left;
+    font-size: 36px;
 }

@@ -51,7 +51,7 @@ header{
     text-align: center;
     /* font-weight: bold; */
     line-height: 150px;
-    /*display: none;*/
+    display: block;
 }
 .auto a{
     text-decoration: none;
