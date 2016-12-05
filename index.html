@@ -8,8 +8,7 @@
 
     <title>Everydaystudy by ING-FE</title>
   </head>
-
-  <body>
+<body>
   <div class="container">
         <header>ING-FE</header>
         <p>— —世界上最好看的人都在这里啦</p>
@@ -17,7 +16,9 @@
   <div class="wrap">
         <div class="item">
             <img src="images/a4-min.jpg">
-            <div class="auto" id="auto">
+
+            <div class="auto">
+
                 <a href="hcy.html">韩楚怡老学姐</a>
             </div>
         </div>
@@ -35,7 +36,7 @@
           <div class="auto">
               <a href="wqt.html">wuli涛涛</a>
           </div>
-      </div>
+</div>
 
       <div class="item" style="background-color:black"></div>
       <div class="item">
@@ -59,14 +60,13 @@
           </div>
       </div>
       <div class="item" style="background-color: black"></div>
-  </div>
-
-  </body>
+</body>
   <script src="./javascripts/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
     $(function () {
         $(".auto").hide();
         $(".item").hover(function () {
+            // $(this).find("div").addClass(" animated bounceInDown");
             $(this).find("div").slideToggle(500).show();
 
         })

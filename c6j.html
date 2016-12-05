@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>C6J小学妹</title>
-
-      
         <link rel="stylesheet" href="stylesheets/c6j.css" />
       
 </head>
@@ -15,7 +13,7 @@
         <div class="navbar-header">
             
             <a class="logo"  href="https://666j.github.io">
-                <img class="logo_img" src="images/6j.jpg" />  
+                <img class="logo_img img" src="images/blacktocat.png" data-src="images/6j.jpg" />  
             </a>
             <a class="navbar-name" href="https://666j.github.io">
                C6J
@@ -28,37 +26,123 @@
                 <a href="#2016y">
                 	2016年  
                 </a>
+                
+                <ul class="submenu">
+                        <li><a href="#2016_12">12月</a></li>
+                        
+                    </ul>
+                
              </li>
            
-            <li><a href="#2017">2017年</a></li>
-            <li><a href="#">SHARE</a></li>
+            <li>
+            	<a href="#2017y">2017年</a>
+            	 <ul class="submenu">
+                        <li><a href="#">1月</a></li>
+                        <li><a href="#">2月</a></li>
+                        <li><a href="#">3月</a></li>
+                        <li><a href="#">4月</a></li>
+                        <li><a href="#">5月</a></li>
+                        <li><a href="#">6月</a></li>
+                        <li><a href="#">7月</a></li>
+                        <li><a href="#">8月</a></li>
+                    </ul>
+                </li>
+           </li>
+
             <li>
                 <a href="http://www.jianshu.com/users/942d9144cdcd/latest_articles">简书</a>           
             </li>
+		     
+		     	
+                   
         </ul>
     </div>
 </nav>
 <div id ="content">
-    <h2>
-     <a name="2016y">2016</a>
+    <h2 class="year">
+     <a name="2016y" >2016</a>
     </h2> 
+     
 	<ul id="do_list">
      
 		<li class="list_li">
-			<h3 class="date">2016/12/2</h3>
-			<ol class="today_list">
-				<li>读、改计算新闻学的模板源码</li>
-				<li>改展示页面</li>
-			</ol>
+			<h3 class="date"><a name="2016_12">2016/12/2</a></h3>
+			<div class="left_plan">
+         		计划：
+         	
+         	</div>
+			<div class="right_done">
+				done:
+            	<ol class="today_list">
+            		
+					<li>读、改计算新闻学的模板源码</li>
+					<li>改展示页面</li>
+				</ol>
+           </div>
+			
 		</li>
         <li class="list_li">
             <h3 class="date">2016/12/3</h3>
-            <ol class="today_list">
-                <li>读、改计算新闻学的模板源码的视频部分</li>
-                <li>学习react-native基础</li>
-            </ol>
+            <div class="left_plan">
+         		计划：
+         	
+         	</div>
+            <div class="right_done">
+            	done:
+            	 <ol class="today_list">
+	                <li>读、改计算新闻学的模板源码的视频部分</li>
+	                <li>学习react-native基础</li>
+	            </ol>
+           </div>
+           
+        </li>
+        <li class="list_li">
+            <h3 class="date">2016/12/4</h3>
+            <div class="left_plan">
+         		计划：
+         	
+         	</div>
+            <div class="right_done">
+            	done:
+            	<ol class="today_list">
+	                <li>js去抖和节流</li>
+	                <li>图片懒加载</li>
+	                <li>修改c6J的页面，迁移项目</li>
+	                <li><a href="#">写关于去抖和节流的博客</a></li>
+	            </ol>
+           </div>
+            
+        </li>
+         <li class="list_li">
+         	<h3 class="date">2016/12/5</h3>
+         	<div class="left_plan">
+         		计划：
+         		<ol class="today_list">
+	                <li>react-native布局一个完整的页面</li>
+	                <li>帮庆文改完web实验</li>
+	                <li>写float的博客</li>
+	                
+	            </ol>
+         	</div>
+         	
+         	<div class="right_done">
+            	
+           </div>
+            
+            
         </li>
 	</ul>
 </div>
+<script>
+	window.onload = function(){
+		loadImg();
+	}
+	function loadImg(){
+		var img = document.getElementsByClassName("img");
+		for(var i = 0;i<img.length;i++){
+			img[i].src = img[i].getAttribute("data-src");
+		}
+	}
+</script>
 </body>
 </html>
