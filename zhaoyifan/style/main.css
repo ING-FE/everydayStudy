@@ -35,6 +35,9 @@ a {
     justify-content: center;
     align-items: center;
 }
+#left :hover {
+    cursor: pointer;
+}
 #right {
     background-color: #1672B9;
     box-shadow: 0 0 50px 0 #007269 inset;
@@ -67,5 +70,5 @@ a {
 #leftContent {
     display: none;
     text-align: left;
-    font-size: 48px;
+    font-size: 36px;
 }

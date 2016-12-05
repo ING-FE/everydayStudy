@@ -16,35 +16,39 @@ var interval = null;
 const PERCENTAGE = 70;
 var step = 5;
 console.log(matchMedia('(orientation: landscape)').matches);
+function addListener() {
+    if(matchMedia('(orientation: landscape)').matches) {
 
-if(matchMedia('(orientation: landscape)').matches) {
+        left.div.onmouseenter = function(e) {
+            Expand(left, right, PERCENTAGE);
+        }
 
-    left.div.onmouseenter = function(e) {
-        Expand(left, right, PERCENTAGE);
-    }
+        right.div.onmouseenter = function(e) {
+            Expand(right, left, PERCENTAGE);
+        }
 
-    right.div.onmouseenter = function(e) {
-        Expand(right, left, PERCENTAGE);
-    }
-
-    left.div.onclick = function(e) {
-        Expand(left, right, 100);
-        console.log(((100 - PERCENTAGE) / step) * 1000);
-        setTimeout(function() {showContent(left.content)}, 100);
-        setTimeout(function() {
-            left.title.style.display = 'none';
-            right.title.style.display = 'none';
-        }, 100);
-    }
-}else{
-    left.div.onclick = function(e) {
-        setTimeout(function() {showContent(left.content)}, 100);
-        setTimeout(function() {
-            left.title.style.display = 'none';
-            right.title.style.display = 'none';
-            right.div.style.display = 'none';
-            left.div.style.height = '100%';
-        }, 100);
+        left.div.onclick = function(e) {
+            Expand(left, right, 100);
+            console.log(((100 - PERCENTAGE) / step) * 1000);
+            left.div.onclick = function(e) {
+                restore();
+            }
+            setTimeout(function() {showContent(left.content)}, 100);
+            setTimeout(function() {
+                left.title.style.display = 'none';
+                right.title.style.display = 'none';
+            }, 100);
+        }
+    }else{
+        left.div.onclick = function(e) {
+            setTimeout(function() {showContent(left.content)}, 100);
+            setTimeout(function() {
+                left.title.style.display = 'none';
+                right.title.style.display = 'none';
+                right.div.style.display = 'none';
+                left.div.style.height = '100%';
+            }, 100);
+        }
     }
 }
 
@@ -75,3 +79,15 @@ function showContent(target) {
 function hideContent(target) {
 
 }
+function restore() {
+    left.div.style.width = '50%';
+    right.div.style.width = '50%';
+    left.content.style.display = 'none';
+    // right.content.style.display = 'none';
+    
+    left.title.style.display = 'inline';
+    right.title.style.display = 'inline';
+
+    addListener();
+}
+addListener();
