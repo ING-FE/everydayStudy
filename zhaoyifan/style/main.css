@@ -21,7 +21,7 @@ a {
 }
 @media (orientation: portrait) {
     a {
-        font-size: 60px;
+        font-size: 36px;
     }
 }
 #left {
@@ -64,11 +64,24 @@ a {
 }
 @media (orientation: portrait) {
     .title {
-        font-size: 72px;
+        font-size: 36px;
     }
 }
 #leftContent {
     display: none;
     text-align: left;
     font-size: 36px;
+}
+#rightTitle {
+    display: none;
+}
+#rightContent {
+    font-family: myFirstFont;
+    text-align: right;
+}
+@media (orientation: portrait) {
+#rightContent {
+    font-family: myFirstFont;
+    text-align: center;
+}
 }
