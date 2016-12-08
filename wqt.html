@@ -11,6 +11,21 @@
 //            document.getElementById("block1").style.height= window.innerHeight-5+'px';
 //
 //        }
+var display = false;
+
+    function show() {
+            var  left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var a =  window.innerHeight+'px';
+            var b =  window.innerWidth*0.8+'px';
+            var c =  window.innerWidth*0.2+'px';
+            display = !display;
+            left.style.height = display? a : "0px";
+            left.style.width = display? b: "0px";
+            right.style.height = display? a : "0px";
+            right.style.width = display? c: "0px";
+
+    }
     </script>
     <style>
         *{
@@ -47,7 +62,7 @@
             opacity: .4;
             border-bottom-right-radius:80em ;
 
-           // border-top-left-radius:80em ;
+            /*border-top-left-radius:80em ;*/
         }
         #title{
 
@@ -69,6 +84,49 @@
             background-color: #666666;
             opacity: .4;
         }
+        #left{
+            height: 0;
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 0;
+            background-color: white;
+            opacity: .5;
+            overflow: hidden;
+            z-index: 1;
+            transition: height 0.6s,width 0.6s;
+            font-size: 1.5em;
+        }
+        #left p{
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30%;
+        }
+        #right{
+            height: 0;
+            position: fixed;
+            top:0;
+            right: 0;
+            width: 0;
+            background-color: black;
+            opacity: .5;
+            z-index: 1;
+            overflow: hidden;
+            transition: height 0.6s,width 0.6s;
+            color: white;
+            padding-top: 10%;
+            overflow: hidden;
+
+        }
+        #right ul li{
+            color: white;
+            font-size: 1em;
+        }
+        #button{
+            position: absolute;
+            right: 0;
+            z-index: 100;
+        }
         @media screen and (min-width: 320px) and (max-width : 479px){
             #bg-pic{
                 height: 100%;
@@ -87,6 +145,18 @@
 <body>
     <div id="wrap">
         <img id="bg-pic" src="images/wengbg.jpg">
+        <button id="button" onclick="show()">==</button>
+
+        <div id="left">
+            <p>每一个不曾起舞的日子都是对生命的浪费</p>
+        </div>
+        <div id="right">
+            <ul>
+                <a href="http://wengqt.github.io" onclick="show()"><li>weng的博客</li></a>
+                <a href="#12_4" onclick="show()"><li>2016-12</li></a>
+            </ul>
+
+        </div>
         <div id="main">
             <div id="block1">
                 <p id="title">EveryDay</p>
@@ -111,6 +181,24 @@
                         </ul>
                     </li>
                 </ul>
+
+                <ul class="day_list" id="12_6">
+                    <li>12.6
+                        <ul>
+                            <li>完成了基于bs的在线考试系统的逻辑部分</li>
+                            <li>现在只差界面的美化了= =</li>
+                            <li>稍微改了一下自己page的样式</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="day_list" id="12_7">
+                    <li>12.7
+                        <ul>
+                            <li>初步学习es6</li>
+                        </ul>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
