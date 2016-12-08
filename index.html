@@ -1,76 +1,43 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 
     <title>Everydaystudy by ING-FE</title>
-  </head>
+</head>
 <body>
-  <div class="container">
-        <header>ING-FE</header>
-        <p>— —世界上最好看的人都在这里啦</p>
-  </div>
-  <div class="wrap">
+<div id="wrap">
+    <div class="nav">
+        <p>ING STUDIO FE</p>
+    </div>
+    <hr>
+    <div id="arrow"></div>
+    <div id="block"></div>
+    <div id="container">
         <div class="item">
-            <img src="images/a4-min.jpg">
-
-            <div class="auto">
-
-                <a href="hcy.html">韩楚怡老学姐</a>
-            </div>
+            <a href="hcy.html">韩楚怡</a>
         </div>
-      <div class="item" style="background-color: black"></div>
-      <div class="item">
-          <img src="images/a2-min.jpg">
-          <div class="auto">
-              <a href="zhaoyifan">印第安老斑鸠</a>
-          </div>
-      </div>
-      <div class="item" style="background-color: white"></div>
-      <div class="item" style="background-color: white"></div>
-      <div class="item">
-          <img src="images/a3-min.jpg">
-          <div class="auto">
-              <a href="wqt.html">wuli涛涛</a>
-          </div>
+        <div class="item">
+            <a href="c6j.html">柳娟</a>
+        </div>
+        <div class="item">
+            <a href="lily.html">陈琳</a>
+        </div>
+        <div class="item">
+            <a href="wqt.html">涛涛</a>
+        </div>
+        <div class="item">
+        <a href="zq.html">骞</a>
+         </div>
+        <div class="item">
+            <a href="zhaoyifan">帆</a>
+        </div>
+    </div>
 </div>
-
-      <div class="item" style="background-color:black"></div>
-      <div class="item">
-          <img src="images/a3-min.jpg">
-          <div class="auto">
-              <a href="zq.html">our 骞 </a>
-     </div>
-   </div>
-
-      <div class="item">
-          <img src="images/6j.jpg">
-          <div class="auto">
-              <a href="c6j.html">陈柳娟</a>
-          </div>
-      </div>
-      <div class="item" style="background-color: white"></div>
-      <div class="item">
-          <img src="images/chenlin.jpg">
-          <div class="auto">
-              <a href="cl/lily.html">陈琳</a>
-          </div>
-      </div>
-      <div class="item" style="background-color: black"></div>
 </body>
-  <script src="./javascripts/jquery-1.10.2.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $(".auto").hide();
-        $(".item").hover(function () {
-            // $(this).find("div").addClass(" animated bounceInDown");
-            $(this).find("div").slideToggle(500).show();
-
-        })
-    })
-
-</script>
+<script type="text/javascript"src="js/index.js"></script>
 </html>
