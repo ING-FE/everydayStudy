@@ -1,64 +1,105 @@
-body{
-    margin:0;
+*{
+    margin: 0;
     padding: 0;
-    font-size: 12px;
-    font-family: "微软雅黑";
-    color:white;;
 }
-.container{
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+.nav{
     width: 100%;
     height: 80px;
-    background-color: rgba(1,1,1,0.7);
-    margin-bottom: 50px;
 }
-header{
-    font-size: 30px;
-    font-weight: bold;
-    text-indent: 80px;
-}
-.container p{
-    font-size: 15px;
-    text-indent: 80px;
-    /*font-style: italic;*/
-}
-.wrap{
-    width: 600px;
-    height: 450px;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-.item,.showBlock{
-    width: 150px;
-    height: 150px;
-    float: left;
-    background-color:#333333;
-    z-index: 1;
-    position: relative;
-}
-.item img{
-    width: 100%;
-    height: 100%;
-}
-.auto{
-    width: 100%;
-    height: 100%;
-    float: left;
-    background-color: RGBA(0,0,0,.5);
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    /* font-weight: bold; */
-    line-height: 150px;
-    display: block;
-}
-.auto a{
-    text-decoration: none;
+.nav p{
     color: white;
-    font-size: 15px;
+    font-size: 40px;
+    font-family:"微软雅黑";
+    font-weight:bold;
+    line-height:80px;
+    text-indent:20px;
 }
-.auto a:hover{
-    color: darkgreen;
-    font-size: 18px;
+hr{
+    border: 3px solid white;
+}
+#arrow{
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 200px solid white;
+    margin: 0 auto;
+    transition: border-top 2s;
+
+}
+#arrow:hover{
+    border-top:300px solid white;
+}
+#block{
+    background: white;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    transform: rotate(20deg);
+    float: right;
+    right: 100px;;
+}
+#block:before {
+       content: "";
+       position: absolute;
+        top: 0;
+       left: 0;
+        height: 80px;
+        width: 80px;
+        background: white;
+     transform: rotate(135deg);
+}
+.blockMove{
+    animation-name: example;
+    animation-duration: 4s;
+}
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:white; right:100px; top:0px;}
+    25%  {background-color:white; right:150px; top:-100px;}
+    50%  {background-color:white; right:300px; top:0px;}
+    75%  {background-color:white; right:150px; top:100px;}
+    100% {background-color:white; right:100px; top:0px;}
+}
+#container{
+    width: 100px;
+    height: 300px;
+    background-color: white;
+    /* float: right; */
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+.item{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #9AC0CD;
+    transition:width 2s;
+}
+.item a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+
+}
+.item:hover{
+    width: 150px;
 }
