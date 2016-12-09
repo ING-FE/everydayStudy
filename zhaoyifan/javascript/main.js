@@ -1,93 +1,109 @@
-function $(id) {
-    return document.getElementById(id);
-}
+const start = Date.now();
+class Page {
+    constructor(document) {
+        this.canvas = document.getElementById('canvas');
+    }
 
-var left = {};
-var right = {};
-left.div = $('left');
-right.div = $('right');
-left.title = $('leftTitle');
-right.title = $('rightTitle');
-left.content = $('leftContent');
-right.content = $('rightContent');
-console.log(right.text);
-
-var interval = null;
-const PERCENTAGE = 70;
-var step = 5;
-console.log(matchMedia('(orientation: landscape)').matches);
-function addListener() {
-    if(matchMedia('(orientation: landscape)').matches) {
-
-        left.div.onmouseenter = function(e) {
-            Expand(left, right, PERCENTAGE);
-        }
-
-        right.div.onmouseenter = function(e) {
-            Expand(right, left, PERCENTAGE);
-        }
-
-        left.div.onclick = function(e) {
-            Expand(left, right, 100);
-            console.log(((100 - PERCENTAGE) / step) * 1000);
-            left.div.onclick = function(e) {
-                restore();
-            }
-            setTimeout(function() {showContent(left.content)}, 100);
-            setTimeout(function() {
-                left.title.style.display = 'none';
-                right.title.style.display = 'none';
-            }, 100);
-        }
-    }else{
-        left.div.onclick = function(e) {
-            setTimeout(function() {showContent(left.content)}, 100);
-            setTimeout(function() {
-                left.title.style.display = 'none';
-                right.title.style.display = 'none';
-                right.div.style.display = 'none';
-                left.div.style.height = '100%';
-            }, 100);
-        }
+    init() {
+        this.canvas.height = innerHeight - 4;
+        this.canvas.width = innerWidth;
     }
 }
 
+class Square {
+    constructor(x, y) {
+        const LENGTH = 100;
+        this.x = x;
+        this.y = y;
+        this.width = LENGTH;
+        this.height = LENGTH;
+        this.midX = this.x + this.width / 2;
+    }
 
-function Expand(source, destination, targetWidth) {
-    var width = source.div.style.width ? 1*(source.div.style.width.substring(0, source.div.style.width.length-1)) : 50;
-    // console.log(width.width);
-    if(interval !== null)
-        return;
-    interval = setInterval(function() {
-        if(width < targetWidth) {
-            source.div.style.width = (width+5) + '%';
-            console.log(source.div.style.width)
-            width += step;
-            destination.div.style.width = 100 - width + '%';
+    draw(context) {
+        context.fillRect(this.x, this.y, this.width, this.height);
+    }
+    clear(context) {
+        context.clearRect(this.x, this.y, this.width, this.height);
+    }
+    expand() {
+        this.x += 10;
+    }
+    setWidthPercentage(percentage) {
+        this.width = 100 * percentage;
+        this.x = this.midX - this.width / 2;
+    }
+}
+
+class Canvas {
+    constructor(context) {
+        this.context = context;
+    }
+
+    drawShape(shape) {
+        shape.draw(this.context);
+    }
+
+    paint(shapes) {
+        for(let i of shapes) {
+            i.draw(this.context);
         }
-        else {
-            clearInterval(interval);
-            interval = null;
+    }
+    setStyle(style) {
+        this.context.fillStyle = style;
+    }
+    setFont(font) {
+        this.context.font = font;
+    }
+    drawText(text) {
+        this.context.textAlign = 'center';
+        this.context.fillText(text, innerWidth / 2, innerHeight / 2); 
+    }
+}
+
+function init() {
+
+mycvs.setStyle('#30A080');
+mycvs.setFont("Bold 72px myFont");
+let square = new Square(0, 0);
+let squares = [];
+for(let i = 0; i < 30; i++) {
+    for(let x = 0; x <= i; x++) {
+        let y = i - x;
+        setTimeout((function(x, y) {
+            return function() {
+                let square = new Square(x * 100, y * 100);
+                square.setWidthPercentage(0.1);
+                squares.push(square);
+            }
+        })(x, y), i * 50);
+    }
+}
+setTimeout(function() {
+    for(var s of squares) {
+        for(let i = 0; i < 11; i++) {
+            setTimeout((function(i, s) {
+                return function(){
+                    s.setWidthPercentage(0.1 * i);
+                }
+            })(i, s), i * 20);
         }
-    }, 5);
+    }}, 1500);
+
+mycvs.setStyle('black');
+mycvs.drawText('hey');
+
+setInterval(function() {
+    mycvs.setStyle('#30A080');
+    mycvs.paint(squares);
+    if(Date.now() - start > 1550) {
+        mycvs.setStyle('black');
+        mycvs.drawText('Daily FE');
+    }
+}, 20);
 }
 
-
-function showContent(target) {
-    target.style.display = 'block';
-}
-function hideContent(target) {
-
-}
-function restore() {
-    left.div.style.width = '50%';
-    right.div.style.width = '50%';
-    left.content.style.display = 'none';
-    // right.content.style.display = 'none';
-    
-    left.title.style.display = 'inline';
-    right.title.style.display = 'inline';
-
-    addListener();
-}
-addListener();
+let page = new Page(document);
+page.init();
+let mycvs = new Canvas(page.canvas.getContext('2d'));
+init();
