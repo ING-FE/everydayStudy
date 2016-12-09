@@ -90,7 +90,7 @@ hr{
     text-align: center;
     line-height: 50px;
     background-color: rgb(255, 163, 0);;
-    /*opacity: 0.5;*/
+    opacity: 1;
     transition:width 1s;
 }
 a{
