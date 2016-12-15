@@ -91,14 +91,14 @@ setTimeout(function() {
     }}, 1500);
 
 mycvs.setStyle('black');
-mycvs.drawText('hey');
+mycvs.drawText('Daily FE');
 
 setInterval(function() {
     mycvs.setStyle('#30A080');
     mycvs.paint(squares);
     if(Date.now() - start > 1550) {
         mycvs.setStyle('black');
-        mycvs.drawText('Daily FE');
+        mycvs.drawText('Working on ES6');
     }
 }, 20);
 }
