@@ -22,6 +22,7 @@
 	position: fixed;
 	top: 0;
 	color:#9d9d9d;
+    z-index: 9999;
 }
 .navbar a{
 	color:#9d9d9d;
@@ -59,7 +60,7 @@ a{
 	display: inline-block;
 }
 #content{
-	margin-top: 60px;
+	
 	
 	width: 100%;
 }
@@ -79,6 +80,7 @@ a{
 	margin-right: 0px;
 	width: 100%;
 	list-style: none;
+    background: #f1f1f1
 }
 #do_list{
 	/*font-size: 1.4em;*/
@@ -89,8 +91,9 @@ a{
 
 }
 #do_list>li{
-	border-bottom: 1px solid #d3d3d3;
-	padding-bottom: 10px;
+	margin: 1em;
+    padding: 2em;
+    background: #fff;
 }
 
 .navbar-nav, .navbar-nav ul {
@@ -215,5 +218,73 @@ a{
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 2%;
-	border-left: 1px dotted #A1A1A1;
+	/*border-left: 1px dotted #A1A1A1;*/
+}
+.planByMonth {
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+    color: #fff;
+    font-size: 2em;
+    background-color:rgba(0, 0, 0, 0.4);
+     width: 70%;
+     height: 3em;
+     text-align: center;
+     line-height: 3em;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    overflow:hidden;
+}
+.monthPlan{
+    position: relative;
+}
+#wrap{
+    display: flex;
+    margin-top: 100px;
+
+}
+#rightContent{
+    background: #f1f1f1;
+    width: 30%;
+    margin-left: 2em;
+    
+    position: fixed;
+}
+#monthContent{
+    background: #fff;
+    height: 400px;
+    padding: 1em;
+    margin-bottom: 1em;
+   
+}
+ul.monthlist {
+    border-top: 1px solid #00a67c;
+    color: #00a67c;
+    padding: 0px;
+    list-style: none;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.righth2 {
+    font-size: 1.2em;
+    color: #555;
+}
+
+li.monthli {
+    border-bottom: solid 1px #eee;
+    padding: 8px 15px;
+}
+ul.sociallist li{
+    margin-left: 1em;
+}
+ul.sociallist {
+    display: flex;
+    list-style: none;
+    background: #fff;
+    height: 50px;
+    align-content: space-between;
 }

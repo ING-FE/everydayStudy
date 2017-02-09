@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>陈柳娟的学习日常更新</title>
-		 <link rel="stylesheet" href="6j/stylesheets/c6j.css" />
+		 <link rel="stylesheet" href="stylesheets/c6j.css" />
 	</head>
 	<body>
 		<div id="container"></div>
-		<script src="6j/js/react.js"></script>
-	    <script src="6j/js/react-dom.js"></script>
-	    <script src="6j/js/browser.min.js"></script>
+		<script src="js/react.js"></script>
+	    <script src="js/react-dom.js"></script>
+	    <script src="js/browser.min.js"></script>
 	    <script type="text/babel">
 		var data= [{hrefValue:"#",text:"1月"},{hrefValue:"#",text:"2月"},{hrefValue:"#",text:"3月"},{hrefValue:"#",text:"4月"},{hrefValue:"#",text:"5月"},
 		{hrefValue:"#",text:"6月"},{hrefValue:"#",text:"7月"},{hrefValue:"#",text:"8月"}];
@@ -73,7 +73,7 @@
 					return(
 					<nav className="navbar" role="navigation">
 						<div className="container-fluid">
-							<Logo  hostHref="https://666j.github.io" imgSrc="6j/image/6j.jpg"/>
+							<Logo  hostHref="https://666j.github.io" imgSrc="image/6j.jpg"/>
 							 <ul className="navbar-nav">
 							 	<Year year = "2017年" data = {data}/>
 							 	<Jianshu/>
@@ -110,7 +110,7 @@
 				render:function(){
 					return(
 						<div className ="monthPlan">
-							<img src="6j/image/bg.jpg"/>
+							<img src="image/bg.jpg"/>
 							<div className="planByMonth">
 								<span>{this.props.monthplan}</span>
 							</div>
@@ -183,22 +183,22 @@
 						<ul className="sociallist">
 							<li>
 								<a>
-									<img src="6j/image/weibo.png"/>
+									<img src="image/weibo.png"/>
 								</a>
 							</li>
 							<li>
 								<a>
-									<img src="6j/image/qq.png"/>
+									<img src="image/qq.png"/>
 								</a>
 							</li>
 							<li>
-								<a href="http://www.jianshu.com/users/942d9144cdcd/latest_articles">
-									<img src="6j/image/jianshu.png"/>
+								<a>
+									<img src="image/jianshu.png"/>
 								</a>
 							</li>
 							<li>
-								<a href="https://666j.github.io">
-									<img src="6j/image/github.png"/>
+								<a>
+									<img src="image/github.png"/>
 								</a>
 							</li>
 						</ul>
@@ -220,7 +220,7 @@
 			
 			});
 			var monthDone = [{done:"17.01月:期末考试，算法，情感分析"},{done:"17.02月:算法，react"}];
-			var lists = [{date:"2017.2.9",items:[{item:"修改完页面"},{item:"看电影"}]},{date:"2017.2.8",items:[{item:"修改展示page页面"}]}];
+			var lists = [{date:"2017.2.8",items:[{item:"修改展示page页面"}]},{date:"2017.2.9",items:[{item:"修改完页面"},{item:"看电影"}]}];
 			var cmonthPlan = "本月计划：学习react和算法";
 			ReactDOM.render(<Container></Container>,document.getElementById("container"));
 	    </script>
