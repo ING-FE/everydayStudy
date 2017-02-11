@@ -210,7 +210,7 @@
 			var Container = React.createClass({
 				render:function(){
 					return(
-						<div>
+						<div id="container">
 							<Header></Header>
 							<Content lists={lists}></Content>
 						</div>
@@ -222,7 +222,7 @@
 			var monthDone = [{done:"17.01月:期末考试，算法，情感分析"},{done:"17.02月:算法，react"}];
 			var lists = [{date:"2017.2.9",items:[{item:"修改完页面"},{item:"看电影"}]},{date:"2017.2.8",items:[{item:"修改展示page页面"}]}];
 			var cmonthPlan = "本月计划：学习react和算法";
-			ReactDOM.render(<Container></Container>,document.getElementById("container"));
+			ReactDOM.render(<Container></Container>,document.body);
 	    </script>
 	</body>
 </html>

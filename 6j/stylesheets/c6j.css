@@ -2,6 +2,13 @@
  	margin: 0;
  	background: #f1f1f1;
  }
+ div#container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
  .logo{
      margin-top: 6px;
        height: 48px;
