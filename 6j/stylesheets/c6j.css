@@ -4,9 +4,18 @@
  }
  div#container {
     display: flex;
-    align-items: center;
+    display: -webkit-flex;     /* NEW - Chrome */
+    -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
     align-content: center;
-    flex-direction: row;
+   -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
     justify-content: space-between;
 }
  .logo{
@@ -253,6 +262,7 @@ a{
 #wrap{
     display: flex;
     margin-top: 100px;
+    justify-content: center;
 
 }
 #rightContent{
