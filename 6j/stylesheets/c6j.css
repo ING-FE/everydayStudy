@@ -5,13 +5,13 @@
  div#container {
     display: flex;
     display: -webkit-flex;     /* NEW - Chrome */
-    -webkit-align-items: center;
+  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
-    align-content: center;
-   -webkit-flex-direction: row;
+  align-content: center;
+  -webkit-flex-direction: row;
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   -o-flex-direction: row;
@@ -75,11 +75,7 @@ a{
 .navbar-header{
 	display: inline-block;
 }
-#content{
-	
-	
-	width: 100%;
-}
+
 .year{
 	margin: 0px auto;
 	padding: 10px;
@@ -243,7 +239,7 @@ a{
     color: #fff;
     font-size: 2em;
     background-color:rgba(0, 0, 0, 0.4);
-     width: 70%;
+     width: 60%;
      height: 3em;
      text-align: center;
      line-height: 3em;
@@ -253,15 +249,18 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 65%;
-    overflow:hidden;
+    width: 63%;
+    overflow: hidden;
 }
 .monthPlan{
     position: relative;
 }
 #wrap{
-    display: flex;
+        display: flex;
+    width: 100%;
     margin-top: 100px;
+    align-content: center;
+    align-items: center;
     justify-content: center;
 
 }
