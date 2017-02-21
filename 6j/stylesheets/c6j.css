@@ -90,16 +90,17 @@ a{
 	margin-top: 60px;
 	margin-left: 0px;
 	margin-right: 0px;
+    padding: 0;
 	width: 100%;
 	list-style: none;
     background: #f1f1f1
+    font-family: "微软雅黑";
+	
+	color: #494a4a;
 }
 #do_list{
 	/*font-size: 1.4em;*/
-	font-family: "微软雅黑";
-	margin-left: 0;
-	margin-right: 0;
-	color: #494a4a;
+	
 
 }
 #do_list>li{
@@ -249,18 +250,18 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 63%;
+    width: 54%;
     overflow: hidden;
 }
 .monthPlan{
     position: relative;
 }
 #wrap{
-        display: flex;
+    display: flex;
     width: 100%;
     margin-top: 100px;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
 }
@@ -269,7 +270,7 @@ a{
     width: 30%;
     margin-left: 2em;
     
-    position: fixed;
+    /*position: fixed;*/
 }
 #monthContent{
     background: #fff;
